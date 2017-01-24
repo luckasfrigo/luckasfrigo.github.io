@@ -95,10 +95,15 @@ header {
         padding: 4px 12px;
         margin-top: -2px;
         color: white;
+        margin-bottom: 0;
     }
 
         .featured.action_button::before {
             background-color: #00546e;
+        }
+
+        .featured.action_button::after {
+            background-color: #cd834c;
         }
 
 section,
@@ -283,15 +288,16 @@ footer {
     #publications .action_button {
         color: #cd834c;
         margin-top: 52px;
+        transition: color .2s ease-out;
     }
+
+        #publications .action_button:hover {
+            color: white;
+        }
 
         #publications .action_button::before {
             background-color: white;
         }
-
-#partners {
-    background-color: white;
-}
 
 #contact {
     background-image: url('../img/neofloresta_padronagem_v2.png');
@@ -303,35 +309,83 @@ footer {
         color: #00546e;
     }
 
-    #contact input,
-    #contact textarea {
+    #contact .input-field {
+        position: relative;
         display: block;
         width: 90%;
-        border: none;
-        padding: 8px;
         margin: 8px 5%;
         font-size: 14px;
         float: left;
+        overflow: hidden;
     }
 
-    #contact input.half {
+        #contact input,
+        #contact textarea {
+            border: none;
+            padding: 12px;
+            display: block;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .input-field input,
+        .input-field textarea {
+            width: 100%;
+        }
+
+        .input-field label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: #aaa;
+            padding: 8px;
+            font-size: 16px;
+            font-weight: 300;
+            color: transparent;
+            pointer-events: none;
+        }
+
+            .input-field>input:focus + label,
+            .input-field>textarea:focus + label {
+                font-size: 12px;
+                padding: 2px;
+            }
+
+            #contact .input-field label::after {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 3px;
+                width: 0;
+                background: #00546e;
+            }
+
+            #contact .input-field>input:focus + label::after,
+            #contact .input-field>textarea:focus + label::after {
+                width: 100%;
+                transition: width .2s ease-out;
+            }
+
+    #contact .half {
         width: 44%;
         margin-right: 1%;
     }
 
-    #contact input.half:nth-of-type(2n) {
+    #contact .input-field.half:nth-of-type(2n) {
         margin-left: 1%;
     }
 
     #contact input:focus,
     #contact textarea:focus {
         outline: none;
-        padding-bottom: 6px;
-        border-bottom: 2px solid #00546e;
     }
 
     #contact .action_button {
-        padding: 0 16px 0 12px;
+        padding: 8px 16px 8px 12px;
         float: right;
         margin-right: 5%;
     }
@@ -389,17 +443,45 @@ footer {
     z-index: 1;
     margin-bottom: 64px;
 }
+    .action_button:hover {
+        text-decoration: none;
+    }
 
     .action_button::before {
-        content: '';
-        height: 120%;
+        content: "";
+        position: absolute;
         transform: skewX(45deg);
         width: 110%;
-        position: absolute;
+        height: 120%;
         top: -10%;
         left: -5%;
         background-color: #cd834c;
         z-index: -1;
+    }
+
+    .action_button::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 110%;
+        height: 120%;
+        top: -10%;
+        left: -5%;
+        background: #00546e;
+        transform: skewX(45deg) scaleX(0);
+        transition-property: transform;
+        transform-origin: 0 50%;
+        transition-duration: .2s;
+        transition-timing-function: ease-out;
+    }
+
+    .action_button:hover::after {
+        transform: skewX(45deg) scaleX(1);
+    }
+
+    .action_button:active::after {
+        transform: skewX(45deg) scaleX(1);
+        background: #00445e;
     }
 
 .parallax {
@@ -408,6 +490,10 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.required {
+    color: red;
 }
 
 .more {
@@ -456,13 +542,44 @@ footer {
         margin-top: 4px;
     }
 
-    section {
+    .more {
+        margin-top: 0;
+    }
+
+    #fields {
+        padding-top: 132px;
+    }
+
+    #clients {
+        padding-top: 8px;
+    }
+
+    section,
+    footer {
         padding-left: 80px;
         padding-right: 80px;
+        padding-top: 92px;
+    }
+
+    footer>div {
+        width: 45%;
+        margin: 0;
+    }
+
+    blockquote {
+        margin: 48px auto;
+    }
+
+    .action_button {
+        margin-bottom: 48px;
+    }
+
+    #publications .action_button {
+        margin-top: 32px;
     }
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 960px) {
     header::before {
         height: 80px;
         left: 0;
@@ -477,10 +594,34 @@ footer {
 
     #fields {
         background-position: 0 bottom;
+        padding-top: 96px;
+    }
+
+    #clients {
+        padding-top: 0;
+    }
+
+    #publications>div {
+        display: block;
+    }
+
+        #publications article {
+            width: 380px;
+            margin: auto;
+            padding-top: 0;
+            padding: 20px 0 20px 60px;
+            background-position: left center;
+            background-size: 120px;
+            box-sizing: border-box;
+        }
+
+    section,
+    footer {
+        padding-top: 84px;
     }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 840px) {
     nav a.mobile_menu {
         display: block;
         width: 40px;
@@ -502,16 +643,37 @@ footer {
     }
 
     #fields {
-        background-position: 130% 320%;
+        background-position: 130% 120px;
         padding-left: 80px;
         padding-right: 80px;
+    }
+
+    #contact .half,
+    #contact .input-field.half:nth-of-type(2n) {
+        width: 90%;
+        margin: 8px 5%;
+    }
+
+    footer {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    #fast_access {
+        display: none;
+    }
+
+    #contact_info {
+        float: none;
+        margin: auto;
+        width: 300px;
     }
 }
 
 @media screen and (max-width: 640px) {
-    #fields {
-        padding-left: 40px;
-        padding-right: 40px;
+    #clients {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 

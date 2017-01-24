@@ -89,12 +89,30 @@
         <section id="contact">
             <h2>Entre em contato conosco</h2>
             <form>
-                <input name="nome" class="half" placeholder="Nome*">
-                <input name="empresa" class="half" placeholder="Empresa">
-                <input name="email" class="half" placeholder="E-mail*">
-                <input name="telefone" class="half" placeholder="Telefone">
-                <input name="assunto" placeholder="Assunto*">
-                <textarea name="conteudo" placeholder="Digite aqui sua mensagem*" rows="8"></textarea>
+                <div class="input-field half">
+                    <input id="nome" name="nome" type="text" placeholder="Nome*">
+                    <label for="nome" class="">Nome</label>
+                </div>
+                <div class="input-field half">
+                    <input id="empresa" name="empresa" placeholder="Empresa">
+                    <label for="empresa" class="">Empresa</label>
+                </div>
+                <div class="input-field half">
+                    <input id="email" name="email" placeholder="E-mail*" >
+                    <label for="email" class="">E-mail</label>
+                </div>
+                <div class="input-field half">
+                    <input id="telefone" name="telefone" placeholder="Telefone">
+                    <label for="telefone" class="">Telefone</label>
+                </div>
+                <div class="input-field">
+                    <input id="assunto" name="assunto" placeholder="Assunto*">
+                    <label for="assunto" class="">Assunto</label>
+                </div>
+                <div class="input-field">
+                    <textarea id="conteudo" name="conteudo" rows="8" placeholder="Digite aqui sua mensagem*"></textarea>
+                    <label for="conteudo" class="">Digite aqui sua mensagem</label>
+                </div>
                 <div class="action_button">
                     <input type="submit">
                 </div>
@@ -102,6 +120,14 @@
         </section>
 
         <footer>
+            <div id="contact_info">
+                <h4>Contatos</h4>
+                <p>contato@neofloresta.com.br</p>
+                <p>+55 (46) 98888-8888</p>
+                <p>+55 (46) 98888-8888</p>
+                <address>R. Paulo Antônio de Godoy 220<br>
+                Bairro da Luz, Dois Vizinhos, PR, Brasil.</address>
+            </div>
             <div id="fast_access">
                 <h4>Acesso rápido</h4>
                 <nav>
@@ -113,14 +139,6 @@
                     <p><a href="#">Trabalhe conosco</a></p>
                     </ul>
                 </nav>
-            </div>
-            <div id="contact_info">
-                <h4>Contatos</h4>
-                <p>central@moblee.net</p>
-                <p>+55 (48) 3236-0049</p>
-                <p>+52 (55) 8421-6398 | +54 (911) 3831-6333</p>
-                <address>R. Cônego Bernardo, 57, Sala 601<br>
-                Bairro Trindade, Florianópolis , SC, Brasil.</address>
             </div>
             <small>Neofloresta | 2017 Todos direitos reservados</small>
         </footer>
