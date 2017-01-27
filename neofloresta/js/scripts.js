@@ -15,3 +15,6 @@ mobileMenuList.onclick = function() {
     mobileMenuList.attributes.class.nodeValue = '';
     isMenuOpen = false;
 }
+
+var preload = document.getElementById('preload');
+preload.parentNode.removeChild(preload);
