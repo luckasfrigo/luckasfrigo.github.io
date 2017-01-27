@@ -4,19 +4,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Neofloresta - Serviços Ecossistêmicos</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.min.css">
     </head>
     <body>
         <header>
             <img class="logo" src="img/neofloresta_hor.png" width="300" height="200">
             <nav id="main_menu">
-                <a class="mobile_menu"></a>
-                <ul>
+                <a id="mobile_menu"></a>
+                <ul id="menu_list">
                     <li><a href="#about">Sobre</a></li>
                     <li><a href="#fields">Áreas de Atuação</a></li>
                     <li><a href="#clients">Projetos</a></li>
                     <li><a href="#publications">Publicações</a></li>
                     <li><a class="featured action_button" href="#contact">Entre em contato</a></li>
+                </ul>
+                <ul id="mobile_menu_list" class="closed">
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#fields">Áreas de Atuação</a></li>
+                    <li><a href="#clients">Projetos</a></li>
+                    <li><a href="#publications">Publicações</a></li>
+                    <li><a href="#contact">Entre em contato</a></li>
                 </ul>
             </nav>
         </header>
@@ -142,5 +149,6 @@
             </div>
             <small>Neofloresta | 2017 Todos direitos reservados</small>
         </footer>
+        <script src="js/scripts.min.js"></script>
     </body>
 </html>

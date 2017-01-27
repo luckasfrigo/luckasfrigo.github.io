@@ -70,7 +70,7 @@ header {
         background-color: #fff;
     }
 
-        nav a.mobile_menu {
+        nav #mobile_menu {
             display: none;
         }
 
@@ -104,6 +104,58 @@ header {
 
         .featured.action_button::after {
             background-color: #cd834c;
+        }
+
+    #mobile_menu_list {
+        display: none;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 88px;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition: height .2s ease-out;
+    }
+
+        #mobile_menu_list::before {
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: rgba(0, 0, 0, .5);
+            left: 0;
+            right: 0;
+            top: -8px;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        #mobile_menu_list.open {
+            height: 1024px;
+            transition: height .5s ease-out;
+        }
+
+        #mobile_menu_list li {
+            background-color: white;
+            float: none;
+            box-sizing: border-box;
+        }
+
+        #mobile_menu_list li>a {
+            display: block;
+            width: 100%;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 300;
+            padding: 16px 20px;
+            box-sizing: border-box;
+            text-align: right;
+        }
+
+        #mobile_menu_list li>a:hover {
+            text-decoration: none;
         }
 
 section,
@@ -613,6 +665,11 @@ footer {
             background-position: left center;
             background-size: 120px;
             box-sizing: border-box;
+            text-align: left;
+        }
+
+        #publications h4 {
+            margin-left: 50px;
         }
 
     section,
@@ -622,7 +679,7 @@ footer {
 }
 
 @media screen and (max-width: 840px) {
-    nav a.mobile_menu {
+    nav #mobile_menu {
         display: block;
         width: 40px;
         height: 40px;
@@ -633,11 +690,15 @@ footer {
         background-size: 40px 50px;
     }
 
-    header li {
+    #mobile_menu_list {
+        display: block;
+    }
+
+    #menu_list li {
         display: none;
     }
 
-    header li:last-of-type {
+    #menu_list li:last-of-type {
         display: block;
         margin-right: 54px;
     }
@@ -675,6 +736,14 @@ footer {
         padding-left: 20px;
         padding-right: 20px;
     }
+
+        #clients h2 {
+            margin: 36px 28px;
+        }
+
+    #publications p {
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (max-width: 540px) {
@@ -710,4 +779,46 @@ footer {
         #fields li {
             margin-bottom: 8px;
         }
+
+        #contact_info {
+            width: auto;
+        }
+}
+
+@media screen and (max-width: 420px) {
+    #publications article {
+        width: 100%;
+        padding: 20px 0 20px 40px;
+        background-position: -12px center;
+        background-size: 96px;
+    }
+
+    #publications h4 {
+        margin-top: 8px;
+    }
+
+    #publications p {
+        padding: 0 10px 0 50px;
+    }
+
+    footer {
+        padding-top: 48px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    #publications article {
+        width: 100%;
+        padding: 20px 0 20px 4px;
+        background-position: -12px center;
+        background-size: 72px;
+    }
+
+    #publications h4 {
+        margin-top: 8px;
+    }
+
+    #publications p {
+        padding: 0 10px 0 50px;
+    }
 }
