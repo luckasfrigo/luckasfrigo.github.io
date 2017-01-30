@@ -1,0 +1,176 @@
+@charset "UTF-8";
+
+section {
+    background-color: #f0f0f0;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+p {
+    font-weight: 300;
+}
+
+section p a {
+    color: black;
+    text-decoration: underline;
+}
+
+#history {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+    -moz-column-fill: balance;
+    column-fill: balance;
+    padding-top: 124px;
+    padding-bottom: 48px;
+    font-weight: 300;
+}
+
+    #history h2 {
+        -moz-column-span: all;
+        column-span: all;
+    }
+
+    #history p {
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+
+#team_photo {
+    height: 180px;
+}
+
+#mission {
+    margin: auto;
+    background-color: white;
+    padding-top: 64px;
+    padding-bottom: 48px;
+}
+
+    article {
+        float: left;
+        width: 31.6%;
+        padding: 0 12px;
+        margin-bottom: 24px;
+    }
+
+        article>img {
+            display: block;
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+            border: 0 solid tranparent;
+            overflow: hidden;
+        }
+
+    article:nth-of-type(3n+1) {
+        padding-left: 0;
+        clear: both;
+    }
+
+    article:nth-of-type(3n) {
+        padding-right: 0;
+    }
+
+    article:nth-of-type(4n):last-of-type {
+        margin-left: calc(480px - 15.8%);
+    }
+
+#team {
+    padding-top: 64px;
+    padding-bottom: 48px;
+}
+
+.parallax.team {
+    background-image: url("../img/equipe.jpg");
+}
+
+@media screen and (max-width: 1024px) {
+    article {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    article {
+        float: left;
+        width: 45%;
+        padding: 0 5%;
+    }
+
+        article>img {
+            width: 160px;
+            height: 160px;
+        }
+
+        article:nth-of-type(4n):last-of-type {
+            margin-left: 0;
+        }
+
+        article:nth-of-type(3n+1) {
+            padding-left: 5%;
+            clear: none;
+        }
+
+        article:nth-of-type(2n+1) {
+            padding-left: 0;
+            clear: both;
+        }
+
+        article:nth-of-type(3n) {
+            padding-right: 5%;
+        }
+
+        article:nth-of-type(2n) {
+            padding-right: 0;
+        }
+
+        #mission>article {
+            width: auto;
+            padding: 0 32px;
+            margin-bottom: 8px;
+        }
+
+    #history {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    article {
+        width: auto;
+        padding: 0 32px;
+        margin-bottom: 8px;
+    }
+
+        article:nth-of-type(3n+1) {
+            padding-left: 32px;
+            clear: none;
+        }
+
+        article:nth-of-type(2n+1) {
+            padding-left: 32px;
+            clear: none;
+        }
+
+        article:nth-of-type(3n) {
+            padding-right: 32px;
+        }
+
+        article:nth-of-type(2n) {
+            padding-right: 32px;
+        }
+
+    #history {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+}
