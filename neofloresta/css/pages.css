@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+section:first-of-type {
+    background-color: #f0f0f0;
+    padding-bottom: 48px;
+}
+
+.wp-caption.aligncenter {
+    margin: 0 auto;
+}
