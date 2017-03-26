@@ -489,6 +489,10 @@ footer {
         margin-top: 4px;
     }
 
+    header li:not(:last-child) {
+        display: none;
+    }
+
     .more {
         margin-top: 0;
     }
@@ -630,6 +634,21 @@ footer {
 }
 
 @media screen and (max-width: 640px) {
+    #menu_list li:last-child {
+        display: none;
+    }
+
+    header .logo {
+        margin: -10px auto;
+        float: none;
+        display: block;
+        height: 44px;
+    }
+
+    header:before {
+        height: 68px;
+    }
+
     #clients {
         padding-left: 20px;
         padding-right: 20px;
@@ -681,6 +700,11 @@ footer {
         #contact_info {
             width: auto;
         }
+
+    #price ul {
+        list-style: none;
+        padding: 0 20px;
+    }
 }
 
 @media screen and (max-width: 420px) {
