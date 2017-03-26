@@ -1,25 +1,4 @@
-var mobileMenu     = document.getElementById('mobile_menu');
-var mobileMenuList = document.getElementById('mobile_menu_list');
-var isMenuOpen     = false;
-
-mobileMenu.onclick = function() {
-    if (isMenuOpen) {
-        mobileMenuList.attributes.class.nodeValue = '';
-    } else {
-        mobileMenuList.attributes.class.nodeValue = 'open';
-    }
-    isMenuOpen = !isMenuOpen;
-}
-
-mobileMenuList.onclick = function() {
-    mobileMenuList.attributes.class.nodeValue = '';
-    isMenuOpen = false;
-}
-
-var preload = document.getElementById('preload');
-preload.parentNode.removeChild(preload);
-
-var contactForm = document.getElementById('contato-email');
+var contactForm = document.getElementById('contact');
 contactForm.onsubmit = function(e) {
     e.preventDefault();
     var http = new XMLHttpRequest();
@@ -37,11 +16,7 @@ contactForm.onsubmit = function(e) {
 
     http.onreadystatechange = function() {//Call a function when the state changes.
         if(http.readyState == 4) {
-            if (http.status == 200) {
-                alert("Agradecemos seu interesse! O Bem Legal ainda não está na ativa, mas assim que começarmos a operar você será o primeiro a saber.");
-            } else {
-                alert("Não foi possível enviar a mensagem. Recarregue a página para tentar novamente.");
-            }
+            alert("Agradecemos seu interesse! O Bem Legal ainda não está na ativa, mas assim que começarmos a operar você será o primeiro a saber.");
         }
     }
     http.send(params);
