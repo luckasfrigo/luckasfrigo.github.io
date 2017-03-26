@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="cache-control" content="private, max-age=600">
+        <meta http-equiv="last-modified" content="Fri, 27 Jan 2017 13:00:00 -0300" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bem legal - Plataforma Jurídica para Micro e Pequenas Empresas</title>
+    </head>
+    <body>
+        <header>
+            <img src="img/logo.svg" class="logo" width="220">
+            <nav id="main_menu">
+                <ul id="menu_list">
+                    <li><a href="#about">O que fazemos</a></li>
+                    <li><a href="#fields">Nossos diferenciais</a></li>
+                    <li><a href="#price">Quanto custa</a></li>
+                    <li><a class="featured action_button" href="#contact" onClick="ga('send', 'event', 'CTA Nav', 'Click');">Faça um teste gratuito</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="about" class="parallax">
+            <h1>Sua solução preventiva para assuntos jurídicos</h1>
+            <h2>A plataforma jurídica para micro e pequenas empresas feita para você</h2>
+
+            <a class="action_button ghost" href="#contact" onClick="ga('send', 'event', 'CTA hero', 'Click');">Experimente agora</a>
+
+            <div class="more"><a href="#fields">Saiba mais</a></div>
+        </section>
+
+        <section id="fields">
+            <h1>O que fazemos</h1>
+            <h2>Completo, não complexo</h2>
+            <p>Com sistema automatizado e uma rede de advogados associados, oferecemos um serviço de qualidade por um valor que cabe no seu bolso.</p>
+            <h2>Ajudamos você a criar e organizar seus contratos de forma fácil</h2>
+            <p>Temos diversos templates para as mais diversas necessidades que sua empresa pode encontrar e, caso exista alguma necessidade mais específica, temos um time de profissionais prontos para te ajudar.</p>
+            <h2>Uma plataforma, diversas soluções</h2>
+            <p>Solução preventiva é o nosso mote, acreditamos que investir um pouco de dinheiro todo mês e garantir atendimento sempre que for necessário é o melhor caminho para as pequenas e médias empresas trem um orçamento previsível e sem surpresa.</p>
+            <p>Precisando criar uma notificação para cobrança, uso indevido de imagem, descumprimento de contrato? Ajudamos você e fazemos a entrega de sua notificação.</p>
+        </section>
+
+        <section id="clients">
+            <h1>Chegou até aqui e ainda não fez o teste de nossa ferramenta?</h1>
+            <p>Teste gratuitamente por 30 dias, sem compromisso. Mas sabemos que você vai querer renovar.</p>
+
+            <a class="action_button ghost" href="#contact" onClick="ga('send', 'event', 'CTA main', 'Click');">Comece seu teste agora</a>
+        </section>
+
+        <section id="publications">
+            <h1>Nossos diferenciais</h1>
+            <div>
+                <article id="articles">
+                    <h2>Um valor que cabe no seu bolso</h2>
+                </article>
+                <article id="media">
+                    <h2>Um time de especialistas em direito empresarial, trabalhista, societário e autoral.</h2>
+                </article>
+                <article id="patents">
+                    <h2>Um seguro jurídico para sua empresa</h2>
+                </article>
+            </div>
+        </section>
+
+        <section id="price">
+            <h1>Quanto custa</h1>
+            <p>Esses são os benefícios que oferecemos mensalmente para você:</p>
+            <ul>
+                <li>1 hora de consultoria online por vídeo</li>
+                <li>Suporte jurídico e contratual personalizado</li>
+                <li>Modelos de contratos</li>
+                <li>1 revisão de contrato sob demanda</li>
+                <li>2 Webinars</li>
+                <li>Criação e envio de notificações extra-judiciais</li>
+                <li class="featured">Apenas R$ 299,00</li>
+            </ul>
+
+            <a class="action_button" href="#contact" onClick="ga('send', 'event', 'CTA price', 'Click');">Experimente grátis agora</a>
+        </section>
+
+        <section id="contact">
+            <h1>Precisamos de algumas informações para completar seu cadastro</h1>
+            <p>Não se preocupe, nao vai tomar mais que 2 minutos.</p>
+            <form method="post">
+                <div class="input-field half">
+                    <input id="nome" name="nome" type="text" placeholder="Nome*">
+                    <label for="nome" class="">Nome</label>
+                </div>
+                <div class="input-field half">
+                    <input id="email" name="email" placeholder="E-mail*" >
+                    <label for="email" class="">E-mail corporativo</label>
+                </div>
+                <div class="input-field half">
+                    <input id="empresa" name="empresa" placeholder="Empresa">
+                    <label for="empresa" class="">Empresa</label>
+                </div>
+                <div class="input-field half">
+                    <input id="telefone" name="telefone" placeholder="Telefone">
+                    <label for="telefone" class="">Telefone</label>
+                </div>
+                <div class="action_button ghost">
+                    <input type="submit" value="Começar agora!" onClick="ga('send', 'event', 'Conversion', 'Click');">
+                </div>
+            </form>
+        </section>
+
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+        <script src="scripts.js"></script>
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-96243587-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
