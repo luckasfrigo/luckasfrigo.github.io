@@ -3,14 +3,12 @@
 html, body {
     color: #3F2425;
     margin: 0;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
 }
-
-
 
 nav img {
     width: 400px;
@@ -38,6 +36,10 @@ nav li a {
     position: relative;
 }
 
+nav li.here a {
+    color: #F7A502;
+}
+
 nav li a:after {
     bottom: 0;
     content: "";
@@ -48,6 +50,12 @@ nav li a:after {
     background: #3F2525;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
+}
+
+nav li.here a::after {
+    background: #F7A502;
+    width: 100%; 
+    left: 0; 
 }
 
 nav li a:hover:after { 
@@ -61,25 +69,37 @@ nav::after {
     clear: both;
 }
 
+h1 {
+    font-family: 'Chivo', sans-serif;
+    font-weight: 700;
+    font-size: 188%;
+    color: #F7A502;
+}
+
 h2 {
     font-family: 'Chivo', sans-serif;
     font-weight: 700;
     font-size: 262%;
-    text-indent: 0;
+    margin: 80px 0 20px;
 }
 
 p {
     font-weight: 300;
+    text-align: left;
+    line-height: 1.5;
 }
 
 section {
     max-width: 960px;
-    height: 612px;
     padding: 60px calc(50% - 480px) 100px;
     background-clip: border-box;
     background-origin: border-box;
     box-sizing: content-box;
     position: relative;
+}
+
+#wrapper>section {
+    height: 612px;
 }
 
 section>div {
@@ -93,7 +113,6 @@ section:nth-of-type(3)>div {
 
 footer {
     background: #30AA8A;
-    text-align: center;
     height: 200px;
     font-size: 83%;
     color: white;
@@ -103,12 +122,12 @@ footer {
 #wrapper {
     overflow: hidden;
     position: relative;
-    /* margin-top: 180px; */
+    font-size: 24px;
 }
 
 #wrapper::before {
     content: " ";
-    background: url(./fundo.jpg) center top no-repeat;
+    background: url(./home_fundo.jpg) center top no-repeat;
     background-size: auto 2496px;
     display: block;
     width: 100%;
@@ -129,15 +148,15 @@ footer {
 
 #anfibios::before {
     content: " ";
-    background: url(./fundo_meio.png) center left no-repeat;
+    background: url(./ilha_1.png) center left no-repeat;
     background-size: contain;
     display: block;
-    width: 1080px;
-    height: 800px;
+    width: 770px;
+    height: 490px;
     position: absolute;
     z-index: -1;
-    left: calc(50% - 20px);
-    top: -40px;
+    left: calc(50% + 60px);
+    top: 220px;
 }
 
 #especies {
@@ -146,7 +165,7 @@ footer {
 
 #especies::before {
     content: " ";
-    background: url(./fundo_base.png) center left no-repeat;
+    background: url(./ilha_2.png) center left no-repeat;
     background-size: contain;
     display: block;
     width: 980px;
@@ -157,27 +176,38 @@ footer {
     top: -20px;
 }
 
-#jogos {
+#jogos,
+#autores {
     text-align: center;
     height: auto;
     padding-bottom: 70px;
 }
 
-#jogos ul {
+#sobre {
+    text-align: center;
+}
+
+ul.colunas {
     display: flex;
     padding-left: 0;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-#jogos li {
+ul.colunas li {
     list-style: none;
     display: flexbox;
     width: 280px;
-    padding-bottom: 30px;
+    margin: 30px 0;
 }
 
-#jogos li img {
+ul.colunas p,
+footer p {
+    text-align: center;
+    font-size: 100%;
+}
+
+img.janela {
     width: 168px;
     height: 168px;
     border-radius: 84px;
