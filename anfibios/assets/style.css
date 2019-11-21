@@ -74,6 +74,7 @@ h1 {
     font-weight: 700;
     font-size: 188%;
     color: #F7A502;
+    text-align: center;
 }
 
 h2 {
@@ -81,6 +82,13 @@ h2 {
     font-weight: 700;
     font-size: 262%;
     margin: 80px 0 20px;
+}
+
+h3 {
+    font-family: 'Chivo', sans-serif;
+    font-weight: 700;
+    color: #F7A502;
+    text-align: center;
 }
 
 p {
@@ -183,7 +191,8 @@ footer {
     padding-bottom: 70px;
 }
 
-#sobre {
+#sobre,
+#caracteristicas {
     text-align: center;
 }
 
@@ -231,4 +240,17 @@ a.botao-cta {
     background: #E0850B radial-gradient(circle, transparent 1%, #E0850B 1%) center/1500%;
     background-size: 10000%;
     transition: background 0.8s;
+}
+
+#curiosidades {
+    display: flex;
+    padding-left: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 calc(50% - 480px);
+}
+
+#curiosidades>section {
+    display: flexbox;
+    width: 45%;
 }
