@@ -15,3 +15,10 @@ const fecharModal = document.querySelector('#modal .fechar');
 fecharModal.onclick = function() {
     document.getElementById('modal').style.setProperty('display', 'none');
 }
+
+const modal = document.querySelector('#modal');
+modal.onclick = function(event) {
+    if (event.target != iframeModal) {
+        fecharModal.onclick();
+    }
+}
