@@ -83,3 +83,7 @@ section:nth-of-type(3)>div {
     height: auto;
     padding-bottom: 70px;
 }
+
+#jogos h2 {
+    text-align: center;
+}
