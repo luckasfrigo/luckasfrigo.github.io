@@ -19,3 +19,36 @@ ul.colunas li {
 .clicavel:active img {
     transform: none;
 }
+
+#modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(231, 231, 231, 0.8);
+}
+
+#modal .fechar {
+    position: absolute;
+    top: 116px;
+    left: calc(50% + 490px);
+    width: 38px;
+    height: 35px;
+    cursor: pointer;
+}
+
+#modal iframe {
+    border: none;
+    box-sizing: content-box;
+    width: 960px;
+    height: 600px;
+    background: #fff;
+    padding: 40px;
+    border: 2px solid #CBCBCB;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    margin-left: -500px;
+    top: 100px;
+}

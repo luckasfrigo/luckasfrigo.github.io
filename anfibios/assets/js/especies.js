@@ -1,11 +1,17 @@
-const navA = document.querySelectorAll('nav li a');
-for (var i = 0; i < navA.length; i++) {
-    if (navA[i].getAttribute("href").indexOf("#") != -1) {
-        navA[i].onclick = function (event) {
-            const href = event.currentTarget.getAttribute("href");
-            document.querySelector(href).scrollIntoView({behavior: "smooth", block: "center"});
-            event.preventDefault();
-            event.stopPropagation();
-        }
+const anfibio = document.querySelectorAll('.clicavel');
+const iframeModal = document.querySelector('#modal iframe');
+for (var i = 0; i < anfibio.length; i++) {
+    anfibio[i].onclick = function (event) {
+        const anfibio = event.currentTarget.getAttribute("id");
+        iframeModal.setAttribute('src', '');
+        document.getElementById('modal').style.setProperty('display', 'block');
+        setTimeout(function() {
+            iframeModal.setAttribute('src', './assets/especies/' + anfibio + '/bio.html');
+        }, 0);
     }
+}
+
+const fecharModal = document.querySelector('#modal .fechar');
+fecharModal.onclick = function() {
+    document.getElementById('modal').style.setProperty('display', 'none');
 }
