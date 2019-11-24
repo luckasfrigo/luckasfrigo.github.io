@@ -3,3 +3,19 @@
     height: auto;
     padding-bottom: 70px;
 }
+
+ul.colunas li {
+    width: 200px;
+}
+
+.clicavel {
+    cursor: pointer;
+}
+
+.clicavel:hover img {
+    transform: scale(1.1, 1.1);
+}
+
+.clicavel:active img {
+    transform: none;
+}

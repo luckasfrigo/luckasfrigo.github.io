@@ -9,9 +9,6 @@ h2 {
 
 #wrapper>section {
     height: 612px;
-}
-
-section {
     padding: 60px calc(50% - 480px) 100px;
 }
 

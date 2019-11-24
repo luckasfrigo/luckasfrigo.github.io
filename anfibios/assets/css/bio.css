@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+body {
+    max-width: 960px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 120%;
+    color: #DF8D02;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 120%;
+    color: #DF8D02;
+    font-style: italic;
+    margin-top: 0;
+}
+
+#vitrine {
+    height: 360px;
+    overflow: hidden;
+    padding: 0 40px;
+    white-space: nowrap;
+    position: relative;
+}
+
+#figura-vitrine {
+    position: relative;
+    margin: 0;
+    word-spacing: 20px;
+}
+
+#figura-vitrine>img.mapa {
+    background: url(https://tile.gbif.org/3857/omt/5/11/18@2x.png?style=osm-bright);
+    background-size: cover;
+    background-position: 0 -60px;
+    object-fit: cover;
+    object-position: 0 -60px;
+}
+
+#controle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#controle>img {
+    width: 20px ;
+    height: 100%;
+    object-fit: contain;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 10px;
+}
+
+#controle>#direita {
+    right: 0;
+    left: auto;
+    transform: scaleX(-1);
+}
+
+#especie {
+    padding-left: 80px;
+    position: relative;
+    cursor: pointer;
+}
+
+#especie::before {
+    display: block;
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    background: url(../especies/som.png) center center no-repeat;
+    background-size: 44px 47px;
+}
