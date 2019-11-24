@@ -3,3 +3,7 @@
     height: auto;
     padding-bottom: 70px;
 }
+
+li img {
+    object-fit: cover;
+}
