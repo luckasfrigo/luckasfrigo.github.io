@@ -42,7 +42,7 @@ ul.colunas li {
     border: none;
     box-sizing: content-box;
     width: 960px;
-    height: calc(100% - 280px);
+    height: calc(100% - 180px);
     background: #fff;
     padding: 40px;
     border: 2px solid #CBCBCB;
@@ -50,5 +50,5 @@ ul.colunas li {
     position: absolute;
     left: 50%;
     margin-left: -500px;
-    top: 100px;
+    top: 50px;
 }
