@@ -62,6 +62,10 @@ section:nth-of-type(3)>div {
     top: 180px;
 }
 
+#anfibios h2 {
+    margin-top: 160px;
+}
+
 #especies {
     padding-top: 120px;
 }
@@ -86,6 +90,12 @@ section:nth-of-type(3)>div {
 }
 
 #jogos h2 {
+    text-align: center;
+}
+
+#jogos p {
+    max-width: 600px;
+    margin: 20px auto;
     text-align: center;
 }
 
