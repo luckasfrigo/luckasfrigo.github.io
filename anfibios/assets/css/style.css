@@ -112,10 +112,11 @@ body>section:last-of-type {
 
 footer {
     background: #30AA8A;
-    height: 200px;
+    height: 180px;
     font-size: 83%;
     color: white;
     padding-top: 60px;
+    background: url(../img/rodape_fundo.jpg);
 }
 
 ul.colunas {

@@ -29,15 +29,16 @@ section:nth-of-type(3)>div {
 
 #wrapper::before {
     content: " ";
-    background: url(../img/index/home_fundo.jpg) center top no-repeat;
-    background-size: auto 2496px;
+    background: url(../img/index/home_fundo.png) center top no-repeat;
+    background-size: auto 2056px;
+    background-origin: content-box;
     display: block;
     width: 100%;
-    height: 2496px;
+    height: 2056px;
     position: absolute;
     z-index: -1;
     left: 0;
-    margin-top: 0.83em;
+    padding-top: 220px;
 }
 
 #bem-vindo h2 {
@@ -53,12 +54,12 @@ section:nth-of-type(3)>div {
     background: url(../img/index/ilha_1.png) center left no-repeat;
     background-size: contain;
     display: block;
-    width: 770px;
+    width: 882px;
     height: 490px;
     position: absolute;
     z-index: -1;
     left: calc(50% + 60px);
-    top: 220px;
+    top: 180px;
 }
 
 #especies {
@@ -86,4 +87,9 @@ section:nth-of-type(3)>div {
 
 #jogos h2 {
     text-align: center;
+}
+
+#jogos img {
+    width: 220px;
+    height: 220px;
 }
