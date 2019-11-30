@@ -10,3 +10,10 @@
     display: flexbox;
     width: 45%;
 }
+
+@media screen and (max-width: 900px) {
+    #curiosidades>section {
+        width: auto;
+        padding: 0 20px;
+    }
+}

@@ -164,3 +164,58 @@ a.botao-cta {
     background-size: 10000%;
     transition: background 0.8s;
 }
+
+@media screen and (max-width: 900px) {
+    body {
+        font-size: 18px;
+    }
+
+    body>section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    nav img {
+        width: 200px;
+        margin: 20px 20px;
+        float: left;
+        z-index: 2;
+        position: relative;
+    }
+
+    nav ul {
+        position: absolute;
+        background: url(../img/menu.svg) 100% -12px no-repeat;
+        background-origin: content-box;
+        padding: 20px;
+        background-size: 40px;
+        overflow: hidden;
+        right: 0;
+        top: 0;
+        left: 0;
+        height: 30px;
+        transition: .5s height;
+    }
+    
+    nav ul.show {
+        height: 440px;
+        transition: .5s height;
+    }
+    
+    nav ul li {
+        display: block;
+        padding: 20px;
+        background: white;
+        border: 1px solid #CBCBCB;
+        width: 100%;
+        position: relative;
+        left: -20px;
+        z-index: 1;
+        text-align: center;
+        border-top: 0;
+    }
+
+    nav ul li:first-of-type {
+        margin-top: 50px;
+    }
+}

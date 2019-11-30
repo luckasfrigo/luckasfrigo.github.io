@@ -103,3 +103,30 @@ section:nth-of-type(3)>div {
     width: 220px;
     height: 220px;
 }
+
+@media screen and (max-width: 900px) {
+    #wrapper::before {
+        padding-top: 265px;
+    }
+    
+    section>div,
+    section:first-of-type>div, 
+    section:nth-of-type(3)>div {
+        margin: 0 auto;
+    }
+
+    h2 {
+        margin-top: 0;
+        text-align: center;
+    }
+
+    #wrapper>section {
+        height: 612px;
+        padding: 20px 20px 100px;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+}
