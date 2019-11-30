@@ -12,6 +12,7 @@ for (var i = 0; i < navA.length; i++) {
             document.querySelector(href).scrollIntoView({behavior: "smooth", block: "center"});
             event.preventDefault();
             event.stopPropagation();
+            document.querySelector('nav ul').classList.remove("show");
         }
     }
 }
