@@ -29,6 +29,7 @@ div.colunas.duas figure {
 
 div.colunas.tres figure {
     max-width: 32%;
+    min-width: 300px;
 }
 
 figure.esquerda {

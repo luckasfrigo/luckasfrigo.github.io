@@ -1,4 +1,4 @@
-var intervaloScroll;
+/*var intervaloScroll;
 var posicaoScroll = 0;
 const larguraVitrine = document.getElementById('vitrine').offsetWidth;
 const larguraFigura = document.getElementById('figura-vitrine').scrollWidth;
@@ -32,14 +32,36 @@ document.getElementById('esquerda').onmouseover = function() {
 }
 document.getElementById('esquerda').onmouseout = function() {
     clearInterval(intervaloScroll);
-} 
+}*/
 
 var coachando = false;
 document.getElementById('especie').onclick = function() {
+    document.getElementById('especie').classList.remove("tocando");
     if (coachando) {
         document.getElementById('coachar').pause();
     } else {
         document.getElementById('coachar').play();
+        document.getElementById('especie').classList.add("tocando");
     }
     coachando = !coachando;
 }
+
+console.log(document.styleSheets[0]);
+document.styleSheets[0].addRule('#especie.tocando::before', 'background-position-y: 0;', 1);
+var frame = 0;
+setInterval(function() {
+    switch(frame) {
+        case 0:
+            document.styleSheets[0].cssRules[1].style.backgroundPositionY = "-45px";
+            frame++;
+            break;
+        case 1:
+            document.styleSheets[0].cssRules[1].style.backgroundPositionY = "0px";
+            frame++;
+            break;
+        case 2:
+            document.styleSheets[0].cssRules[1].style.backgroundPositionY = "-89px";
+            frame = 0;
+            break;
+    }
+}, 200);
