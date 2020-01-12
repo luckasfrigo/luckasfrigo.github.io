@@ -7,3 +7,17 @@
 li img {
     object-fit: cover;
 }
+
+#sobre .colunas p {
+    font-size: 90%
+}
+
+#apoio {
+    text-align: center;
+}
+
+#apoio img {
+    width: 168px;
+    height: 168px;
+    object-fit: contain;
+}
