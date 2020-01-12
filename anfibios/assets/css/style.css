@@ -117,6 +117,17 @@ footer {
     color: white;
     padding-top: 60px;
     background: url(../img/rodape_fundo.jpg);
+    opacity: 0.8;
+}
+
+footer p {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 5px #4a4605;
+}
+
+footer a {
+    color: white;
 }
 
 ul.colunas {
