@@ -1,3 +1,4 @@
+const body = document.documentElement;
 const anfibio = document.querySelectorAll('.clicavel');
 const iframeModal = document.querySelector('#modal iframe');
 for (var i = 0; i < anfibio.length; i++) {
@@ -5,6 +6,7 @@ for (var i = 0; i < anfibio.length; i++) {
         const anfibio = event.currentTarget.getAttribute("id");
         iframeModal.setAttribute('src', '');
         document.getElementById('modal').style.setProperty('display', 'block');
+        body.className = 'no-click';
         setTimeout(function() {
             iframeModal.setAttribute('src', './assets/especies/' + anfibio + '/bio.html');
         }, 0);
@@ -14,6 +16,7 @@ for (var i = 0; i < anfibio.length; i++) {
 const fecharModal = document.querySelector('#modal .fechar');
 fecharModal.onclick = function() {
     document.getElementById('modal').style.setProperty('display', 'none');
+    body.className = '';
 }
 
 const modal = document.querySelector('#modal');
