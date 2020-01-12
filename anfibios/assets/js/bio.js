@@ -36,17 +36,13 @@ document.getElementById('esquerda').onmouseout = function() {
 
 var coachando = false;
 document.getElementById('especie').onclick = function() {
-    document.getElementById('especie').classList.remove("tocando");
     if (coachando) {
-        document.getElementById('coachar').pause();
+        pause();
     } else {
-        document.getElementById('coachar').play();
-        document.getElementById('especie').classList.add("tocando");
+        play();
     }
-    coachando = !coachando;
 }
 
-console.log(document.styleSheets[0]);
 document.styleSheets[0].addRule('#especie.tocando::before', 'background-position-y: 0;', 1);
 var frame = 0;
 setInterval(function() {
@@ -65,3 +61,15 @@ setInterval(function() {
             break;
     }
 }, 200);
+
+function pause() {
+    document.getElementById('especie').classList.remove("tocando");
+    document.getElementById('coachar').pause();
+    coachando = false;
+}
+
+function play() {
+    document.getElementById('coachar').play();
+    document.getElementById('especie').classList.add("tocando");
+    coachando = true;
+}

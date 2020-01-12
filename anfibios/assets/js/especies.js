@@ -17,6 +17,8 @@ const fecharModal = document.querySelector('#modal .fechar');
 fecharModal.onclick = function() {
     document.getElementById('modal').style.setProperty('display', 'none');
     body.className = '';
+
+    iframeModal.contentWindow.pause();
 }
 
 const modal = document.querySelector('#modal');
